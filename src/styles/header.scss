@@ -2,24 +2,35 @@
 @import 'core/mixins';
 
 .header {
+    display: flex;
+    flex-direction: column;
     background: $blackColor;
     width: 100%;
-    height: 70px;
-    position: absolute;
-    // box-shadow: inset -10px -10px 50px -20px $blueColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    box-shadow: inset -10px -10px 50px -20px $blueColor;
+    // flex-direction: column;
+    // align-items: center;
+    // align-content: center;
+    // text-align: center;
     font-family: $fontGloria;
     padding: 10px;
-    opacity: 0.7;
+    opacity: 0.85;
+    z-index: 1;
 
     @include tablet {
             height: 90px;
             justify-content: left;
-            align-items: inherit;
+            align-items: inherit;   
         }
     
+
+    &__titleContainer {
+        display: flex;
+        padding: 10px;
+    }
+
     &__img {
         margin-right: 15px;
         width: 50px;
