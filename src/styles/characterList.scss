@@ -14,9 +14,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     border: 2px solid $blackColor;
     background: $pinkColor;
-    font-size: 12px;
+    width: 130px;
     margin: 20px;
     cursor: pointer;
    
@@ -25,19 +27,11 @@
             background: $purpleColor;
             filter: saturate(250%);
             color: $whiteColor;
+            box-shadow: 0 0 10px $pinkColor;
         }
 
         @include tablet {
-            font-size: 18px;
-        }
-
-        &_img {    
-            width: 135px;
-            padding: 10px;
-
-            @include tablet {
-                width: 200px;
-            }
+            width: 200px;
         }
     }
 }

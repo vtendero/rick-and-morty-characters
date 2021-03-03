@@ -15,7 +15,7 @@
     @include tablet {
         flex-direction: row;
         height: 70px;
-        margin-bottom: 15px;
+        margin: 15px 0 20px 0;
         justify-content:flex-end;
     }
     
@@ -43,11 +43,13 @@
     &__socialMedia {
         &--icon {
             font-size: 18px;
+            border-radius: 20px;
             color: $whiteColor;
             padding: 5px;
             cursor: pointer;
             &:hover {
                 transform: scale(1.2);
+                // box-shadow: 0 0 10px #ddd;
             }
         }
     }
@@ -56,6 +58,7 @@
         order: -1;
         width: 90px;
         border-radius: 80px;
+        box-shadow: 0 0 10px #ddd;
 
         @include tablet {
             order: 0;
