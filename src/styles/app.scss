@@ -1,0 +1,15 @@
+@import 'core/reset';
+@import 'core/variables';
+
+.page {
+    background: $indigoColor;
+}
+
+.main {
+    min-height: calc(100vh - 130px - 300px - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin: 0 auto;
+    // max-width: 1500px;
+}

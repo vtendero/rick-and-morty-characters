@@ -1,0 +1,64 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: $blackColor;
+    border-top: 1px solid rgb(59, 59, 59);
+    margin-top: 40px;
+    padding: 10px;
+    height: 130px;
+
+    @include tablet {
+        flex-direction: row;
+        height: 70px;
+        margin-bottom: 15px;
+        justify-content:flex-end;
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        color: $whiteColor;
+        font-family: $fontOpenSans;
+        font-size: 16px;
+        padding: 0 20px 10px;
+
+        @include tablet {
+            padding: 0 20px;
+        }
+
+        &--motto {
+            font-family: $fontOpenSans;
+            color: $mottoColor;
+            font-size: 10px;
+        }  
+    }
+
+    &__socialMedia {
+        &--icon {
+            font-size: 18px;
+            color: $whiteColor;
+            padding: 5px;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    &__logo{
+        order: -1;
+        width: 90px;
+        border-radius: 80px;
+
+        @include tablet {
+            order: 0;
+        }
+    }
+}

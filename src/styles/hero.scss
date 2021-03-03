@@ -1,0 +1,25 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+//    position: relative;
+//    z-index: -1;
+    height: 300px;
+    background: url('../images/ricky-morty-4pkk.png') center no-repeat;
+    box-shadow: 0 0 50px #ddd;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+
+        @include tablet {
+            background-size: cover;
+            height: 300px;
+        }
+
+        @include desktop {
+            height: 500px;
+        }
+}
