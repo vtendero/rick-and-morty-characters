@@ -1,6 +1,6 @@
 import '../styles/header.scss';
 import ImageHeader from '../images/ricky-morty-1pk.jpg';
-import FilterByName from './FilterByName';
+import FilterByName from './filters/FilterByName';
 
 const Header = (props) => 
         <header className= 'header'>

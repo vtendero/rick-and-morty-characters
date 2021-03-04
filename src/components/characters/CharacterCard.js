@@ -1,4 +1,4 @@
-import '../styles/characterCard.scss';
+import '../../styles/characters/characterCard.scss';
 
 const CharacterCard = (props) => {
 
@@ -16,7 +16,7 @@ const CharacterCard = (props) => {
 
     const isDead = () => {
         if (props.character.status === 'Dead') {
-            return <i class='fas fa-skull-crossbones'></i>;
+            return <i className='fas fa-skull-crossbones'></i>;
         }
     };
 

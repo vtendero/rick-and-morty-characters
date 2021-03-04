@@ -1,4 +1,4 @@
-import '../styles/filterByName.scss';
+import '../../styles/filters/filterByName.scss';
 
 const FilterByName = (props) => {
 
@@ -13,7 +13,7 @@ const FilterByName = (props) => {
             <form>
                 <input 
                 className='filterByName__input' 
-                type="text"
+                type='text'
                 placeholder='Buscar personaje...'
                 onChange={handleChange}/>
             </form>
