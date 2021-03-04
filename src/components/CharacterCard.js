@@ -10,7 +10,7 @@ const CharacterCard = (props) => {
         && props.character.gender === 'Female') {
             return 'Humana';
         } else if (props.character.species === 'Alien') {
-            return 'Alienígena';
+            return 'Extraterrestre';
         }
     };
 

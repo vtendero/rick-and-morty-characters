@@ -7,17 +7,30 @@ import getDataFromApi from '../services/getDataFromApi';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [nameFilter, setNameFilter] = useState('');
 
   useEffect(() => {
     getDataFromApi().then(data=> setCharacters(data));
   },[]);
 
+  const handleFilter = (data) =>  {
+    if (data.key === 'name') {
+      setNameFilter(data.value);
+    } 
+  }
+
+  const filteredCharacters = characters
+    .filter(character => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })  
+  
     return (
       <>
-        <Header />
+        <Header handleFilter={handleFilter}/>
         <Hero />
         <main className='main'>
-          <CharacterList characters={characters}/>
+          <CharacterList 
+            characters={filteredCharacters}/>
         </main>
         <Footer />
       </>
