@@ -81,8 +81,8 @@ const App = () => {
           handleResetAll={handleResetAll}
         />
         <Hero />
-          <Switch>
             <main className='main'>
+          <Switch>
             <Route exact path='/' >
               <CharacterList  
                 characters={filteredCharacters}
@@ -95,8 +95,8 @@ const App = () => {
               />
             </Route>
             <Route path='/personaje/:id' render={renderCharacterDetail}/>
-            </main>
           </Switch>
+            </main>
         <Footer />
       </>
     );
