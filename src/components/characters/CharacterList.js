@@ -7,8 +7,10 @@ const CharacterList = (props) => {
     const characterItem =
     props.characters.map(character => {
         return (
-            <li key={character.id} className='characterSection__list--item'
-            title={character.name}>
+            <li 
+                key={character.id} 
+                className='characterSection__list--item'
+                title={character.name}>
                 <CharacterCard character={character}/>
             </li>
         )

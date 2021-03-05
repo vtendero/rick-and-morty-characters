@@ -15,11 +15,12 @@ const FilterByName = (props) => {
         <div className='filterByName'>
             <form>
                 <input 
-                className='filterByName__input' 
-                type='text'
-                value={props.nameFilter}
-                placeholder='Buscar personaje... '
-                onChange={handleChange}/>
+                    className='filterByName__input' 
+                    type='text'
+                    value={props.nameFilter}
+                    placeholder='Buscar personaje... '
+                    onChange={handleChange}
+                />
             </form>
             <ResetSearch 
                 handleResetSearch={props.handleResetSearch} 

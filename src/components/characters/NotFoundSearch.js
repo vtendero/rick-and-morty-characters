@@ -1,12 +1,14 @@
 import '../../styles/characters/notFoundSearch.scss';
-import ResetAll from '../reset/ResetAll';
 
 const NotFoundSearch = (props) => {
 
+    const handleOnClick = () => {
+        props.handleResetAll();
+    } 
     return (
         <>
-            <ResetAll handleResetAll={props.handleResetAll}/>
             <section className='notFoundSection'>
+                <i class="fas fa-undo-alt" onClick={handleOnClick}></i>
                 <p className='notFoundSection__text'>No hay ningún personaje que coincida con tu búsqueda.</p>
             </section>
         </>
