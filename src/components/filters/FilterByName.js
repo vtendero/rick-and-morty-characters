@@ -1,4 +1,5 @@
 import '../../styles/filters/filterByName.scss';
+import ResetSearch from '../reset/ResetSearch';
 
 const FilterByName = (props) => {
 
@@ -14,15 +15,14 @@ const FilterByName = (props) => {
                 <input 
                 className='filterByName__input' 
                 type='text'
-                placeholder='Buscar personaje...'
+                value={props.nameFilter}
+                placeholder='Buscar personaje... '
                 onChange={handleChange}/>
             </form>
-            {/* <button className='filterByName__search'>
-                <i class="fas fa-search"></i>
-            </button>
-            <button className='filterByName__reset'>
-                <i class="fas fa-times-circle"></i>
-            </button> */}
+            <ResetSearch 
+                handleResetSearch={props.handleResetSearch} 
+                nameFilter={props.nameFilter}
+            />
         </div>
     );
 }

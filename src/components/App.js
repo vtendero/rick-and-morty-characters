@@ -33,6 +33,23 @@ const App = () => {
     }
   }
 
+ const handleResetSearch = () => {
+   setNameFilter('');
+ }
+
+ const handleResetFilters = () => {
+   setGenderFilter('All');
+   setSpeciesFilter('All');
+   setStatusFilter('All');
+ }
+
+ const handleResetAll = () => {
+   setNameFilter('');
+   setGenderFilter('All');
+   setSpeciesFilter('All');
+   setStatusFilter('All');
+ }
+
   const filteredCharacters = characters
     .filter(character => {
       return character.name.toUpperCase().includes(nameFilter.toUpperCase());
@@ -57,13 +74,24 @@ const App = () => {
 
     return (
       <>
-        <Header handleFilter={handleFilter}/>
+        <Header 
+          handleFilter={handleFilter} 
+          handleResetSearch={handleResetSearch} 
+          nameFilter={nameFilter}
+        />
         <Hero />
           <Switch>
             <main className='main'>
             <Route exact path='/' >
-              <Filters handleFilter={handleFilter}/>
-              <CharacterList  characters={filteredCharacters}/>
+              <CharacterList  
+                characters={filteredCharacters}
+                genderFilter={genderFilter}
+                speciesFilter={speciesFilter}
+                statusFilter={statusFilter}
+                handleFilter={handleFilter}
+                handleResetFilters={handleResetFilters}
+                handleResetAll={handleResetAll}
+              />
             </Route>
             <Route path='/personaje/:id' render={renderCharacterDetail}/>
             </main>
