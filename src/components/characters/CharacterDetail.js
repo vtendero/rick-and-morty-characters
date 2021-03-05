@@ -11,7 +11,7 @@ const CharacterDetail = (props) => {
         } else if (props.character.species === 'Human' 
         && props.character.gender === 'Female') {
             return 'Humana';
-        } else if (props.character.species === 'Alien') 
+        } else if (props.character.species === 'Alien')
             return 'Extraterrestre';
     };
 
@@ -19,15 +19,17 @@ const CharacterDetail = (props) => {
         if (props.character.status === 'Alive') {
             return 'Vivo';
         } else if (props.character.status === 'Dead') {
-            return 'Muerto'
+            return 'Muerto'; 
+        } else if (props.character.origin === 'unknown') {
+            return 'Desconocido';
         };        
     };
 
     const originTranslation = () => {
         if (props.character.origin === 'Earth (C-137)') {
-            return 'Tierra (C-137)';
-        } else if (props.character.origin === 'Earth (Replacement Dimension)') {
-            return 'Tierra (Dimensión de Reemplazo';
+            return 'Tierra';
+        }  else if (props.character.origin === 'Earth (Replacement Dimension)'){
+            return 'Tierra';
         } else if (props.character.origin === 'unknown') {
             return 'Desconocido';
         } else 
@@ -53,10 +55,33 @@ const CharacterDetail = (props) => {
             return props.character.location;
     };
    
-    const isDead = () => {
+    const statusIcon =() => {
         if (props.character.status === 'Dead') {
             return <i className='fas fa-skull-crossbones'></i>;
-        }
+        } else if (props.character.status === 'Alive') {
+            return <i className='fas fa-heart'></i>;
+        } else
+            return <i className='fas fa-question'></i>;
+    };
+
+    const speciesTypeIcon = () => {
+        if (props.character.species === 'Human' && 
+        props.character.gender === 'Male') { 
+            return <i className='fas fa-male'></i>;
+        } 
+        else if (props.character.species === 'Human' 
+        && props.character.gender === 'Female') {
+            return <i className='fas fa-female'></i>;
+        } else
+            return <i className='fab fa-reddit-alien alien'></i>;
+    };
+
+    const originIcon = () => {
+        if (originTranslation() === 'Tierra' ) {
+            return <i className='fas fa-globe-europe'></i>;
+        } else if (originTranslation() === 'Desconocido') {
+            return <i className='fas fa-question-circle'></i>;
+        } 
     };
 
     if (props.character === undefined) {
@@ -78,13 +103,13 @@ const CharacterDetail = (props) => {
                             {props.character.name}
                         </li>
                         <li className='detailSection__article--list_item'>
-                            {`Estado: ${statusTranslation()}`}
+                            {`Estado: ${statusTranslation()}`} {statusIcon()}
                         </li>
                         <li className='detailSection__article--list_item'>
-                            {`Especie: ${speciesTranslation()}`}
+                            {`Especie: ${speciesTranslation()}`} {speciesTypeIcon()}
                         </li>
                         <li className='detailSection__article--list_item'>
-                            {`Origen: ${originTranslation()}`}
+                            {`Origen: ${originTranslation()}`} {originIcon()}
                         </li>
                         <li className='detailSection__article--list_item'>
                             {`Localización: ${locationTranslation()}`}

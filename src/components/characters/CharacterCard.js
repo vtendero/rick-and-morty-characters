@@ -15,7 +15,7 @@ const CharacterCard = (props) => {
         }
     };
 
-    const isDead = () => {
+    const isDeadIcon = () => {
         if (props.character.status === 'Dead') {
             return <i className='fas fa-skull-crossbones'></i>;
         }
@@ -25,14 +25,14 @@ const CharacterCard = (props) => {
         <>
             <Link to={`/personaje/${props.character.id}`}>
                 <img className='characterSection__list--item_img' 
-                    src={props.character.image} 
+                    src={props.character.image}
                     alt={`Foto de ${props.character.name}`}
                 />
                 <h5 className='characterSection__list--item_name'>
-                    {props.character.name} {isDead()}
+                    {props.character.name} {isDeadIcon()}
                 </h5>
                 <p className='characterSection__list--item_specie'>
-                    {speciesTranslation()}
+                    {speciesTranslation()} 
                 </p>
             </Link>
         </>

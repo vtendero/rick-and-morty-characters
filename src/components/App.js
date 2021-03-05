@@ -65,8 +65,8 @@ const App = () => {
               <Filters handleFilter={handleFilter}/>
               <CharacterList  characters={filteredCharacters}/>
             </Route>
-            </main>
             <Route path='/personaje/:id' render={renderCharacterDetail} />
+            </main>
           </Switch>
         <Footer />
       </>
