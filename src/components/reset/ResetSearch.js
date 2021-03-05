@@ -5,8 +5,8 @@ const ResetSearch = (props) => {
     }
 
     return (
-        <button className='filterByName__reset' onClick={handleOnClick}>
-            <i className="fas fa-times-circle"></i>
+        <button className='resetSearchButton' onClick={handleOnClick}>
+            <i className='fas fa-times-circle'></i>
         </button>
     );   
 }

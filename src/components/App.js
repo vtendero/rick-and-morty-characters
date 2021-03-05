@@ -78,6 +78,7 @@ const App = () => {
           handleFilter={handleFilter} 
           handleResetSearch={handleResetSearch} 
           nameFilter={nameFilter}
+          handleResetAll={handleResetAll}
         />
         <Hero />
           <Switch>

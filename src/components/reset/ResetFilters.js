@@ -5,8 +5,8 @@ const ResetFilters = (props) => {
     }
 
     return (
-        <button className='filterByName__reset' onClick={handleOnClick}>
-            <i className="fas fa-times-circle"></i>
+        <button className='resetFiltersButton' onClick={handleOnClick}>
+            <i className='fas fa-times-circle'></i>
         </button>
     );   
 }

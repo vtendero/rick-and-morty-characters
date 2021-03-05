@@ -5,8 +5,10 @@ const ResetAll = (props) => {
     }
 
     return (
-        <button className='filterByName__reset' onClick={handleOnClick}>
-            <i className='far fa-times-circle notFoundSection__back'></i>
+        <button 
+            className='resetAllButton' 
+            onClick={handleOnClick}>
+            <i className='far fa-times-circle resetAllButton__icon'></i>
         </button>
     );   
 }

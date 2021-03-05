@@ -91,7 +91,7 @@ const CharacterDetail = (props) => {
         <>
             <section className='detailSection'>
                 <Link to='/' className='detailSection__back'>
-                    <i className='far fa-times-circle' title='Volver a la página principal'></i>
+                    <i className='fas fa-arrow-circle-left icon_back'>Volver</i>
                 </Link>
                 <article className='detailSection__article'>
                     <img className='detailSection__article--img' 
