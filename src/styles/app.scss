@@ -6,7 +6,8 @@
 }
 
 .main {
-    min-height: calc(100vh - 130px - 400px - 90px);
+    min-height: calc(100vh - 100px - 230px);
+    // min-height: calc(100vh - 130px - 400px - 90px);
     display: flex;
     flex-direction: column;
     align-items: center;
