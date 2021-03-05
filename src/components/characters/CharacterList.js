@@ -13,18 +13,14 @@ const CharacterList = (props) => {
         )
     });
     
-    const notFound = () => {
-        if (characterItem.length === 0) {
-            return <NotFoundSearch />;
-        };
-    }
-
+    if (characterItem.length === 0) {
+        return <NotFoundSearch />;
+    } else 
     return (
         <section className='characterSection'>
             <ul className='characterSection__list'>
                 {characterItem}
             </ul>
-            {notFound()}
         </section>
     );
 }
