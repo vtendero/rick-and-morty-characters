@@ -1,4 +1,5 @@
 import '../../styles/characters/characterCard.scss';
+import { Link } from 'react-router-dom';
 
 const CharacterCard = (props) => {
 
@@ -22,17 +23,18 @@ const CharacterCard = (props) => {
 
     return (
         <>
-            <img className='characterSection__list--item_img' 
-                src={props.character.image} 
-                alt={`Foto de ${props.character.name}`}
-            />
-            <h5 className='characterSection__list--item_name'>
-                {props.character.name} {isDead()}
-            </h5>
-            <p className='characterSection__list--item_specie'>
-                {speciesTranslation()}
-            </p>
-            
+            <Link to={`/personaje/${props.character.id}`}>
+                <img className='characterSection__list--item_img' 
+                    src={props.character.image} 
+                    alt={`Foto de ${props.character.name}`}
+                />
+                <h5 className='characterSection__list--item_name'>
+                    {props.character.name} {isDead()}
+                </h5>
+                <p className='characterSection__list--item_specie'>
+                    {speciesTranslation()}
+                </p>
+            </Link>
         </>
     )
 }

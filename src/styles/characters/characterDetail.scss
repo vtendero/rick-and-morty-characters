@@ -1,0 +1,100 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+
+.fas {
+    font-size: 14px;
+    color: $indigoColor;
+    filter: saturate(250%);
+
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
+.detailSection {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+
+    &__back {
+        font-size: 22px;
+        color: $pinkColor;
+        text-align: right;
+        padding: 5px;
+        position: relative;
+        bottom: -40px;
+        :hover {
+            transform: scale(1.1);
+        }
+
+        @include tablet {
+            font-size: 30px;
+            bottom: -50px;
+            margin-right: 4px;
+        }
+    }
+
+    &__article {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        background: $yellowColor;
+        width: 300px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 15px;
+
+         @include tablet {
+            grid-template-columns: 250px 1fr;
+            width: 530px;
+            padding: 30px;
+        }
+
+        @include desktop {
+            width: 560px;
+        }
+
+        &--img {
+            grid-column: 1/1;
+            width: 110px;
+            margin-left: 5px;
+            box-shadow: 0 0 10px $pinkColor;
+
+            @include tablet {
+                width: 200px;
+            }
+        }
+
+        &--list {
+            font-family: $fontKalam;
+            grid-column: 2/2;
+            list-style-type: none ;
+            font-size: 10px;
+
+            @include tablet {
+                font-size: 14px;
+            }
+
+            @include desktop {
+                font-size: 16px;
+            }
+
+            &_name {
+                font-family: $fontGloria;
+                color: $pinkColor;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-size: 12px;
+
+                @include tablet {
+                    font-size: 18px;
+                }
+
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+        }
+    }   
+}
+

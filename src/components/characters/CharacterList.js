@@ -1,4 +1,5 @@
 import CharacterCard from './CharacterCard';
+import NotFoundSearch from './NotFoundSearch';
 import '../../styles/characters/characterList.scss';
 
 const CharacterList = (props) => {
@@ -10,13 +11,20 @@ const CharacterList = (props) => {
                 <CharacterCard character={character}/>
             </li>
         )
-    })
+    });
+    
+    const notFound = () => {
+        if (characterItem.length === 0) {
+            return <NotFoundSearch />;
+        };
+    }
 
     return (
         <section className='characterSection'>
             <ul className='characterSection__list'>
                 {characterItem}
             </ul>
+            {notFound()}
         </section>
     );
 }

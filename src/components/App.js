@@ -5,9 +5,12 @@ import Hero from './Hero';
 import CharacterList from './characters/CharacterList';
 import Filters from './filters/Filters';
 import Footer from './Footer';
+import { Route, Switch } from 'react-router-dom';
+import CharacterDetail from './characters/CharacterDetail';
 
 
 const App = () => {
+  
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [genderFilter, setGenderFilter] = useState('All');
@@ -44,14 +47,27 @@ const App = () => {
       return statusFilter === 'All' ? true : character.status === statusFilter;
     }) 
   
+    const renderCharacterDetail = (props) => {
+      const characterId = parseInt(props.match.params.id);
+      const selectCharacter = characters.find (character => {
+        return character.id === characterId;
+      });
+        return <CharacterDetail character={selectCharacter} />;
+    };
+
     return (
       <>
         <Header handleFilter={handleFilter}/>
         <Hero />
-        <main className='main'>
-          <Filters handleFilter={handleFilter}/>
-          <CharacterList characters={filteredCharacters}/>
-        </main>
+          <Switch>
+            <main className='main'>
+            <Route exact path='/' >
+              <Filters handleFilter={handleFilter}/>
+              <CharacterList  characters={filteredCharacters}/>
+            </Route>
+            </main>
+            <Route path='/personaje/:id' render={renderCharacterDetail} />
+          </Switch>
         <Footer />
       </>
     );

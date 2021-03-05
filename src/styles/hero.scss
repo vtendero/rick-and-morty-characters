@@ -7,11 +7,10 @@
     justify-content: center;
 //    position: relative;
 //    z-index: -1;
-    height: 300px;
     background: url('../images/ricky-morty-4pkk.png') center no-repeat;
     box-shadow: 0 0 50px #ddd;
     width: 100%;
-    height: 200px;
+    height: 230px;
     background-size: cover;
 
         @include tablet {
@@ -19,6 +18,10 @@
         }
 
         @include desktop {
-            height: 500px;
+            height: 350px;
+        }
+
+         @include superdesktop {
+            height: 700px;
         }
 }
