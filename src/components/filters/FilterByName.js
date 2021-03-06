@@ -11,9 +11,13 @@ const FilterByName = (props) => {
             key: 'name'
         });
     };
+
+    const handleOnSubmit = (ev) => {
+        ev.preventDefault();
+    }
     return (
         <div className='filterByName'>
-            <form>
+            <form onSubmit={handleOnSubmit}>
                 <input 
                     className='filterByName__input' 
                     type='text'
