@@ -1,4 +1,3 @@
-import '../../styles/filters/filterBySpecies.scss';
 
 const FilterBySpecies = (props) => {
 
@@ -9,12 +8,12 @@ const FilterBySpecies = (props) => {
         });
     };
     return (
-        <>
-            <label className='filterBySpecies' htmlFor='species'>
+        <div className='filter'>
+            <label className='filter__BySpecies' htmlFor='species'>
                 Especie:
             </label>
             <select 
-                className='filterBySpecies__select'
+                className='filter__select'
                 name='species'
                 id='species'
                 value={props.speciesFilter}
@@ -24,7 +23,7 @@ const FilterBySpecies = (props) => {
                 <option value='Human'>Humana</option>
                 <option value='Alien'>Extraterreste</option>
             </select>
-        </>
+        </div>
     );
 }
 

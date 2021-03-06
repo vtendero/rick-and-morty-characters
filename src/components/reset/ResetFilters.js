@@ -1,3 +1,5 @@
+import '../../styles/reset/resetFilters.scss';
+
 const ResetFilters = (props) => {
     
     const handleOnClick = () => {
@@ -5,8 +7,12 @@ const ResetFilters = (props) => {
     }
 
     return (
-        <button className='resetFiltersButton' onClick={handleOnClick}>
-            <i className='fas fa-times-circle'></i>
+        <button 
+            className='resetFiltersButton' 
+            type='reset'
+            onClick={handleOnClick}>
+            <i className='far fa-trash-alt reset-icon'></i>
+           Reset
         </button>
     );   
 }

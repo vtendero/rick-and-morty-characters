@@ -18,7 +18,7 @@ const FilterByName = (props) => {
                     className='filterByName__input' 
                     type='text'
                     value={props.nameFilter}
-                    placeholder='Buscar personaje... '
+                    placeholder='Buscar personaje... 🔍'
                     onChange={handleChange}
                 />
             </form>

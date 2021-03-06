@@ -1,3 +1,5 @@
+import '../../styles/reset/resetSearch.scss';
+
 const ResetSearch = (props) => {
     
     const handleOnClick = () => {
@@ -5,9 +7,9 @@ const ResetSearch = (props) => {
     }
 
     return (
-        <button className='resetSearchButton' onClick={handleOnClick}>
-            <i className='fas fa-times-circle'></i>
-        </button>
+        <div className='resetSearchButton' onClick={handleOnClick}>
+            <i className='fas fa-times reset-search'></i>
+        </div>
     );   
 }
 

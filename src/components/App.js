@@ -3,7 +3,6 @@ import getDataFromApi from '../services/getDataFromApi';
 import Header from './Header';
 import Hero from './Hero';
 import CharacterList from './characters/CharacterList';
-import Filters from './filters/Filters';
 import Footer from './Footer';
 import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './characters/CharacterDetail';

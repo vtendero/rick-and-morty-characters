@@ -1,4 +1,3 @@
-import '../../styles/filters/filterByGender.scss';
 
 const FilterByGender = (props) => {
 
@@ -9,12 +8,12 @@ const FilterByGender = (props) => {
         });
     };
     return (
-        <>
-            <label className='filterByGender' htmlFor='gender'>
+        <div className='filter'>
+            <label className='filter__ByGender' htmlFor='gender'>
                 Género:
             </label>
             <select 
-                className='filterByGender__select' 
+                className='filter__select' 
                 name='gender' 
                 id='gender' 
                 value={props.genderFilter}
@@ -25,7 +24,7 @@ const FilterByGender = (props) => {
                 <option value='Male'>Hombre</option>
                 <option value='Unknown'>Desconocido</option>
             </select>
-        </>
+        </div>
     );
 }
 

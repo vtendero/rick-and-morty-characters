@@ -8,7 +8,7 @@ const NotFoundSearch = (props) => {
     return (
         <>
             <section className='notFoundSection'>
-                <i class="fas fa-undo-alt" onClick={handleOnClick}></i>
+                <i className='fas fa-undo-alt' onClick={handleOnClick}></i>
                 <p className='notFoundSection__text'>No hay ningún personaje que coincida con tu búsqueda.</p>
             </section>
         </>

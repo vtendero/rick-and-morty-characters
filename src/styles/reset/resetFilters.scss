@@ -1,0 +1,22 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.resetFiltersButton {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-family: $fontGloria;
+    text-transform: uppercase;
+    margin-top: 28px ;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:focus {
+        outline: 0 none;
+    }
+}
+
+.reset-icon {
+    padding-right: 10px;
+}

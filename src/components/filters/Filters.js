@@ -2,10 +2,11 @@ import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByStatus from './FilterByStatus';
 import ResetFilters from '../reset/ResetFilters';
+import '../../styles/filters/filters.scss';
 
 const Filters = (props) => 
         <section className= 'filters'>
-                <form>
+                <form className= 'filters__form'>
                         <FilterByGender 
                                 handleFilter={props.handleFilter}
                                 genderFilter={props.genderFilter}  
@@ -22,7 +23,6 @@ const Filters = (props) =>
                                 handleResetFilters={props.handleResetFilters}
                         />
                 </form>
-                
         </section>
 
 export default Filters;

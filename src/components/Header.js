@@ -21,7 +21,6 @@ const Header = (props) => {
                                 title='Ir a la página principal'/>
                         </Link>
                                 <h1 className= 'header__title'>Rick y Morty</h1>
-                        
                         </span>
                         <FilterByName handleFilter={props.handleFilter} handleResetSearch={props.handleResetSearch}
                         nameFilter={props.nameFilter}/>

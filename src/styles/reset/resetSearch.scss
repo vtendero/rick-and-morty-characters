@@ -1,0 +1,16 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+
+.reset-search {
+  cursor: pointer;
+  color: $notFoundColor;
+  font-size: 22px;
+  border: none;
+  margin: 3px 0 0 -30px;
+  padding: 5px;
+
+  &:focus {
+    outline: 0 none;
+  }
+}

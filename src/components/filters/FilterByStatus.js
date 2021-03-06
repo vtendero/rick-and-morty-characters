@@ -1,4 +1,3 @@
-import '../../styles/filters/filterByStatus.scss';
 
 const FilterByStatus = (props) => {
 
@@ -9,12 +8,12 @@ const FilterByStatus = (props) => {
         });
     };
     return (
-        <>
-            <label className='filterByStatus' htmlFor='status'>
-                Estado ¿vivo o muerto?:
+        <div className='filter'>
+            <label className='filter__ByStatus' htmlFor='status'>
+                Estado:
             </label>
             <select 
-                className='filterByStatus__select' 
+                className='filter__select' 
                 name='status' 
                 id='status'
                 value={props.statusFilter}
@@ -25,7 +24,7 @@ const FilterByStatus = (props) => {
                 <option value='Dead'>Muerto</option>
                 <option value='unknown'>Desconocido</option>
             </select>
-        </>
+        </div>
     );
 }
 

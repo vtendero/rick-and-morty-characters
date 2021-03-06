@@ -57,30 +57,30 @@ const CharacterDetail = (props) => {
    
     const statusIcon =() => {
         if (props.character.status === 'Dead') {
-            return <i className='fas fa-skull-crossbones'></i>;
+            return '☠️';
         } else if (props.character.status === 'Alive') {
-            return <i className='fas fa-heart'></i>;
-        } else
-            return <i className='fas fa-question'></i>;
+            return '❤️';
+        } else if (props.character.status === 'unknown')
+            return '❓';
     };
 
     const speciesTypeIcon = () => {
         if (props.character.species === 'Human' && 
         props.character.gender === 'Male') { 
-            return <i className='fas fa-male'></i>;
+            return '👨';
         } 
         else if (props.character.species === 'Human' 
         && props.character.gender === 'Female') {
-            return <i className='fas fa-female'></i>;
+            return '👩';
         } else
-            return <i className='fab fa-reddit-alien alien'></i>;
+            return '🛸';
     };
 
     const originIcon = () => {
         if (originTranslation() === 'Tierra' ) {
-            return <i className='fas fa-globe-europe'></i>;
+            return '🌍';
         } else if (originTranslation() === 'Desconocido') {
-            return <i className='fas fa-question-circle'></i>;
+            return '❔';
         } 
     };
 
@@ -91,7 +91,8 @@ const CharacterDetail = (props) => {
         <>
             <section className='detailSection'>
                 <Link to='/' className='detailSection__back'>
-                    <i className='fas fa-arrow-circle-left icon_back'>Volver</i>
+                    <i className='fas fa-angle-double-left detailSection__back--icon'></i>
+                    <p className='detailSection__back--text'>Volver</p>
                 </Link>
                 <article className='detailSection__article'>
                     <img className='detailSection__article--img' 

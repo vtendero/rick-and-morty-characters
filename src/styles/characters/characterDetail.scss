@@ -1,51 +1,45 @@
 @import '../core/variables';
 @import '../core/mixins';
 
-
-.fas, .alien {
-    font-size: 14px;
-    color: $indigoColor;
-    filter: saturate(250%);
-
-    @include tablet {
-        font-size: 20px;
-    }
-}
-
 .detailSection {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 0 0 15px;
 
     &__back {
-        font-size: 22px;
-        color: $pinkColor;
-        text-align: right;
-        padding: 5px;
-        position: relative;
-        bottom: -40px;
-        :hover {
-            transform: scale(1.1);
+        display: flex;
+        align-items: center;
+        width: 100px;
+        color: $whiteColor;
+        padding: 10px;
+
+        &--icon {
+            padding-right: 5px;
         }
 
-        @include tablet {
-            font-size: 30px;
-            bottom: -50px;
-            margin-right: 4px;
+        &--text {
+            font-size: 12px;
+            font-family: $fontGloria;
+
+            @include tablet {
+                font-size: 18px;
+            }
+            
         }
     }
 
     &__article {
         display: grid;
-        grid-template-columns: 130px 1fr;
-        background: $yellowColor;
+        grid-template-columns: 1fr 1fr;
+        background: $indigoColor;
         width: 300px;
         align-items: center;
         padding: 10px;
         border-radius: 15px;
+        border: 2px solid $blackColor;
 
          @include tablet {
-            grid-template-columns: 250px 1fr;
+            grid-template-columns: 220px 1fr;
             width: 530px;
             padding: 30px;
         }
@@ -57,22 +51,24 @@
         &--img {
             grid-column: 1/1;
             width: 110px;
-            margin-left: 5px;
-            box-shadow: 0 0 10px $pinkColor;
+            border-radius: 10px;
 
             @include tablet {
-                width: 200px;
+                width: 220px;
             }
         }
 
         &--list {
             font-family: $fontKalam;
-            grid-column: 2/2;
+            grid-column-end: 3;
             list-style-type: none ;
             font-size: 10px;
+           
+            color: $whiteColor;
 
             @include tablet {
                 font-size: 14px;
+                padding-left: 40px;
             }
 
             @include desktop {

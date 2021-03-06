@@ -7,13 +7,12 @@
     margin: 25px;
     background: url('../../images/ricky-morty-5.png') center no-repeat;
     background-size: cover;
-    box-shadow: 0 0 20px $purpleColor;
     border-radius: 15px;
     width: 300px;
     height: 200px;
 
     @include tablet {
-        width: 600px;
+        width: 670px;
         height: 400px;
     }
 
