@@ -1,0 +1,49 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.notFoundSection {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    background: url('../../images/ricky-morty-5.png') center no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+
+    @include tablet {
+        width: 670px;
+        height: 400px;
+    }
+
+    &__back {
+        font-size: 22px;
+        color: $pinkColor;
+        text-align: right;
+        padding: 5px;
+        position: relative;
+        bottom: -5px;
+        :hover {
+            transform: scale(1.1);
+        }
+
+        @include tablet {
+            font-size: 30px;
+            bottom: -10px;
+            margin-right: 4px;
+        }
+    }
+
+    &__text {
+        font-family: $fontGloria;
+        color: $whiteColor;
+        font-size: 12px;
+        margin-left: 15px;
+
+        @include tablet {
+            font-size: 22px;
+            width: 400px;
+            margin-left: 35px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+// .fas {
+//     font-size: 14px;
+//     color: $indigoColor;
+//     filter: saturate(250%);
+
+//     @include tablet {
+//         font-size: 20px;
+//     }
+// }
+
+.characterSection__list--item {
+    &_img {
+        width: 230px;
+        padding: 10px;
+    }
+
+    &_name {
+        font-size: 18px;
+        color: $yellowColor;
+    }
+
+    &_specie {
+        color: $blackColor;
+        font-size: 16px;
+    }
+}
