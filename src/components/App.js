@@ -3,9 +3,10 @@ import getDataFromApi from '../services/getDataFromApi';
 import Header from './Header';
 import Hero from './Hero';
 import CharacterList from './characters/CharacterList';
-import Footer from './Footer';
-import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './characters/CharacterDetail';
+import Footer from './Footer';
+import Loader from './Loader';
+import { Route, Switch } from 'react-router-dom';
 
 
 const App = () => {
@@ -15,10 +16,13 @@ const App = () => {
   const [genderFilter, setGenderFilter] = useState('All');
   const [speciesFilter, setSpeciesFilter] = useState('All');
   const [statusFilter, setStatusFilter] = useState('All');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getDataFromApi().then(data=> setCharacters(data));
-  },[]);
+    getDataFromApi()
+      .then((data) => setCharacters(data))
+      .then(() => setIsLoading(false));
+  }, []);
 
   const handleFilter = (data) =>  {
     if (data.key === 'name') {
@@ -83,6 +87,7 @@ const App = () => {
             <main className='main'>
           <Switch>
             <Route exact path='/' >
+              {isLoading ? <Loader /> : ''}
               <CharacterList  
                 characters={filteredCharacters}
                 genderFilter={genderFilter}
@@ -91,6 +96,7 @@ const App = () => {
                 handleFilter={handleFilter}
                 handleResetFilters={handleResetFilters}
                 handleResetAll={handleResetAll}
+                isLoading={isLoading}
               />
             </Route>
             <Route path='/personaje/:id' render={renderCharacterDetail}/>
