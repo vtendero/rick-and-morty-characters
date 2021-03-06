@@ -1,6 +1,7 @@
 import CharacterCard from './CharacterCard';
 import NotFoundSearch from './NotFoundSearch';
 import Filters from '../filters/Filters';
+import Loader from '../Loader';
 import '../../styles/characters/characterList.scss';
 
 const CharacterList = (props) => {
@@ -16,9 +17,14 @@ const CharacterList = (props) => {
         )
     });
     
-    if (characterItem.length === 0) {
+    if (props.isLoading) {
+        return <Loader />;
+    } 
+    else if (characterItem.length === 0) {
         return <NotFoundSearch handleResetAll={props.handleResetAll}/>;
-    } else 
+    } 
+    else 
+    
     return (
         <>
         <Filters 
