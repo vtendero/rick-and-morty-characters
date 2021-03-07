@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.6c4c4f8a.chunk.css",
+    "main.css": "./static/css/main.58a7edbe.chunk.css",
     "main.js": "./static/js/main.d3d7dd1f.chunk.js",
     "main.js.map": "./static/js/main.d3d7dd1f.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.cb68263d.js",
@@ -8,7 +8,7 @@
     "static/js/2.f10919a2.chunk.js": "./static/js/2.f10919a2.chunk.js",
     "static/js/2.f10919a2.chunk.js.map": "./static/js/2.f10919a2.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.6c4c4f8a.chunk.css.map": "./static/css/main.6c4c4f8a.chunk.css.map",
+    "static/css/main.58a7edbe.chunk.css.map": "./static/css/main.58a7edbe.chunk.css.map",
     "static/js/2.f10919a2.chunk.js.LICENSE.txt": "./static/js/2.f10919a2.chunk.js.LICENSE.txt",
     "static/media/Loader.6281c6f4.gif": "./static/media/Loader.6281c6f4.gif",
     "static/media/ricky-morty-1pk.e0a0ad9a.jpg": "./static/media/ricky-morty-1pk.e0a0ad9a.jpg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.cb68263d.js",
     "static/js/2.f10919a2.chunk.js",
-    "static/css/main.6c4c4f8a.chunk.css",
+    "static/css/main.58a7edbe.chunk.css",
     "static/js/main.d3d7dd1f.chunk.js"
   ]
 }
