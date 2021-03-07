@@ -17,12 +17,12 @@ const FilterByName = (props) => {
     }
     return (
         <div className='filterByName'>
-            <form onSubmit={handleOnSubmit}>
+            <form className='filterByName_form'onSubmit={handleOnSubmit}>
                 <input 
-                    className='filterByName__input' 
+                    className='filterByName__form--input' 
                     type='text'
                     value={props.nameFilter}
-                    placeholder='Buscar personaje... 🔍'
+                    placeholder='Buscar personaje...🔍'
                     onChange={handleChange}
                 />
             </form>

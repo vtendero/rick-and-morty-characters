@@ -8,8 +8,7 @@
     align-items: center;
     margin: 20px;
     color: $whiteColor;
-    font-family: $fontGloria;
-    text-transform: uppercase;
+    font-family: $fontKalam;
 }
 
 .filter {
@@ -19,7 +18,7 @@
     font-size: 14px;
 
     &__select {
-        font-family: $fontRoboto;
+        font-family: $fontKalam;
         height: 30px;
         &:focus {
         outline: 0 none;

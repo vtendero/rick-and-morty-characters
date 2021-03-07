@@ -3,27 +3,29 @@
 
 .header {
     display: flex;
+    flex-direction: column;
     background: $blackColor;
+    justify-content:flex-start;
     width: 100%;
-    height: 100px;
+    height: 105px;
     position: fixed;
     top: 0;
-    font-family: $fontGloria;
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
     opacity: 0.85;
     z-index: 1;
 
     @include tablet {
-            height: 100px;
-            justify-content: left;
-            align-items: inherit;   
+            height: 110px;
+            padding: 15px 10px 15px 10px;
+        }
+    
+    @include superdesktop {
+            height: 130px;
         }
     
 
     &__titleContainer {
         display: flex;
-        align-items: center;
-        // padding: 10px;
     }
 
     &__img {
@@ -35,19 +37,29 @@
         box-shadow: 0 0 20px $yellowColor;
 
         @include tablet {
-            width: 70px;
-            height: 70px;
-            border-radius: 70px;
-            margin: 20px 20px 10px 10px;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+        }
+        
+        @include superdesktop {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
         }
     }
 
     &__title {
+        font-family: $fontGloria;
         color: $whiteColor;
-        font-size: 30px;
+        font-size: 27px;
         
         @include tablet {
-            font-size: 48px;
+            font-size: 42px;
+        }
+
+        @include superdesktop {
+            font-size: 52px;
         }
     }
 }

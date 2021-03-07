@@ -6,7 +6,8 @@
     height: 30px;
     border: none;
     border-radius: 5px;
-    font-family: $fontGloria;
+    font-family: $fontKalam;
+    font-size: 12px;
     text-transform: uppercase;
     margin-top: 28px ;
     cursor: pointer;
@@ -15,8 +16,4 @@
     &:focus {
         outline: 0 none;
     }
-}
-
-.reset-icon {
-    padding-right: 10px;
 }

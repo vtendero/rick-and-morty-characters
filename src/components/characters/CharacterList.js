@@ -1,7 +1,6 @@
 import CharacterCard from './CharacterCard';
 import NotFoundSearch from './NotFoundSearch';
 import Filters from '../filters/Filters';
-import Loader from '../Loader';
 import '../../styles/characters/characterList.scss';
 
 const CharacterList = (props) => {

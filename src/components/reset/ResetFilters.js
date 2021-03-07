@@ -11,8 +11,7 @@ const ResetFilters = (props) => {
             className='resetFiltersButton' 
             type='reset'
             onClick={handleOnClick}>
-            <i className='far fa-trash-alt reset-icon'></i>
-           Reset
+            Borrar filtros
         </button>
     );   
 }

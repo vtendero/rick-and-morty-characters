@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     getDataFromApi()
       .then((data) => setCharacters(data))
-      .then(() => setIsLoading(false));
+      .then(() => setIsLoading(false));  
   }, []);
 
   const handleFilter = (data) =>  {
@@ -77,7 +77,7 @@ const App = () => {
           isLoading={isLoading}
           />;
     };
-
+     
     return (
       <>
         <Header 

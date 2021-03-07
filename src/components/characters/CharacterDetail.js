@@ -21,7 +21,7 @@ const CharacterDetail = (props) => {
             return 'Vivo';
         } else if (props.character.status === 'Dead') {
             return 'Muerto'; 
-        } else if (props.character.origin === 'unknown') {
+        } else if (props.character.status === 'unknown') {
             return 'Desconocido';
         };        
     };
