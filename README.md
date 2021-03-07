@@ -6,21 +6,19 @@ El ejercicio consiste en desarrollar en React una página web que devuleve un li
 
 ### 1. Listado de personajes
 
-![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/rickandmorty-readme.jpg)
+![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/rickandmorty-readme.JPG)
 
 ### 2. Filtrado de personajes
 
-![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/filtrado-readme.jpg)
+![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/filtrado-readme.JPG)
 
 ### 3. Estructura de componentes
 
-![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/componentes-readme.jpg)
+![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/componentes-readme.JPG)
 
 ### 4. Detalle de personajes
 
-![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/detalle-readme.jpg)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://github.com/Adalab/modulo-3-evaluacion-final-vtendero/blob/master/src/images/readme/detalle-readme.JPG)
 
 ## Descarga e instalación
 
