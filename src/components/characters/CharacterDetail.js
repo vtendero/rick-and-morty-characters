@@ -1,5 +1,6 @@
 import '../../styles/characters/characterDetail.scss';
 import NotFoundDetail from './NotFoundDetail';
+import Loader from '../Loader';
 import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
@@ -83,10 +84,12 @@ const CharacterDetail = (props) => {
             return '❔';
         } 
     };
-
-    if (props.character === undefined) {
+    if (props.isLoading && props.character === undefined) {
+        return <Loader />
+    }
+    else if (props.character === undefined) {
         return <NotFoundDetail />;
-    } else {
+    } else 
     return (
         <>
             <section className='detailSection'>
@@ -122,7 +125,7 @@ const CharacterDetail = (props) => {
                 </article>
             </section>
         </>
-    )};
+    );
 }
 
 

@@ -72,7 +72,10 @@ const App = () => {
       const selectCharacter = characters.find (character => {
         return character.id === characterId;
       });
-        return <CharacterDetail character={selectCharacter} />;
+        return <CharacterDetail 
+          character={selectCharacter} 
+          isLoading={isLoading}
+          />;
     };
 
     return (
@@ -86,8 +89,7 @@ const App = () => {
         <Hero />
             <main className='main'>
           <Switch>
-            <Route exact path='/' >
-              {isLoading ? <Loader /> : ''}
+            <Route exact path='/' > 
               <CharacterList  
                 characters={filteredCharacters}
                 genderFilter={genderFilter}
@@ -98,6 +100,7 @@ const App = () => {
                 handleResetAll={handleResetAll}
                 isLoading={isLoading}
               />
+               {isLoading ? <Loader /> : ''}
             </Route>
             <Route path='/personaje/:id' render={renderCharacterDetail}/>
           </Switch>

@@ -17,13 +17,9 @@ const CharacterList = (props) => {
         )
     });
     
-    if (props.isLoading) {
-        return <Loader />;
-    } 
-    else if (characterItem.length === 0) {
+    if (!props.isLoading && characterItem.length === 0) {
         return <NotFoundSearch handleResetAll={props.handleResetAll}/>;
-    } 
-    else 
+    } else 
     
     return (
         <>
