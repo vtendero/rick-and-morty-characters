@@ -1,6 +1,7 @@
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByStatus from './FilterByStatus';
+import FilterSortByName from './FilterSortByName';
 import ResetFilters from '../reset/ResetFilters';
 import '../../styles/filters/filters.scss';
 
@@ -18,6 +19,10 @@ const Filters = (props) =>
                         <FilterByStatus 
                                 handleFilter={props.handleFilter}
                                 statusFilter={props.statusFilter}
+                        />
+                        <FilterSortByName 
+                                handleFilter={props.handleFilter}
+                                sortByName={props.sortByName}
                         />
                         <ResetFilters 
                                 handleResetFilters={props.handleResetFilters}

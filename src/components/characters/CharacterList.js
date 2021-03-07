@@ -28,6 +28,7 @@ const CharacterList = (props) => {
                 genderFilter={props.genderFilter}
                 speciesFilter={props.speciesFilter}
                 statusFilter={props.statusFilter}
+                sortByName={props.sortByName}
         />
         <section className='characterSection'>
             <ul className='characterSection__list'>

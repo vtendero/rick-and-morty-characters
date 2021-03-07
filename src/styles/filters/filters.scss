@@ -16,6 +16,7 @@
     flex-direction: column;
     padding: 5px 10px 0;
     font-size: 14px;
+    flex-grow: 4;
 
     &__select {
         font-family: $fontKalam;

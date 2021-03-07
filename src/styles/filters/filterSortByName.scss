@@ -1,0 +1,14 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.filter__SortByName {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-top: 22px;
+    flex-grow: 0;
+
+    &--input {
+        margin: -4px 5px 0 0;
+    }
+}

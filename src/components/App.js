@@ -17,6 +17,7 @@ const App = () => {
   const [speciesFilter, setSpeciesFilter] = useState('All');
   const [statusFilter, setStatusFilter] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
+  const [sortByName, setSortByName] = useState(false);
 
   useEffect(() => {
     getDataFromApi()
@@ -33,6 +34,8 @@ const App = () => {
       setSpeciesFilter(data.value);
     } else if (data.key === 'status') {
       setStatusFilter(data.value);
+    } else if (data.key === 'sortByName') {
+      setSortByName(data.checked);
     }
   }
 
@@ -44,6 +47,7 @@ const App = () => {
    setGenderFilter('All');
    setSpeciesFilter('All');
    setStatusFilter('All');
+   setSortByName(false);
  }
 
  const handleResetAll = () => {
@@ -51,6 +55,7 @@ const App = () => {
    setGenderFilter('All');
    setSpeciesFilter('All');
    setStatusFilter('All');
+   setSortByName(false);
  }
 
   const filteredCharacters = characters
@@ -65,7 +70,19 @@ const App = () => {
     })
     .filter(character => {
       return statusFilter === 'All' ? true : character.status === statusFilter;
-    }) 
+    });
+    if (sortByName) {
+      filteredCharacters.sort((a,b) => {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        return filteredCharacters;
+      }); 
+    };
+
   
     const renderCharacterDetail = (props) => {
       const characterId = parseInt(props.match.params.id);
@@ -95,6 +112,7 @@ const App = () => {
                 genderFilter={genderFilter}
                 speciesFilter={speciesFilter}
                 statusFilter={statusFilter}
+                sortByName={sortByName}
                 handleFilter={handleFilter}
                 handleResetFilters={handleResetFilters}
                 handleResetAll={handleResetAll}
