@@ -4,7 +4,8 @@
 .resetFiltersButton {
     width: 100px;
     height: 30px;
-    border: none;
+    border: 1px solid $whiteColor;
+    background: $whiteColor;
     border-radius: 5px;
     font-family: $fontKalam;
     font-size: 12px;
@@ -12,6 +13,7 @@
     margin-top: 28px ;
     cursor: pointer;
     margin-left: 10px;
+    padding: 1px;
 
     &:focus {
         outline: 0 none;
