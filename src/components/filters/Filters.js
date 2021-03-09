@@ -3,6 +3,7 @@ import FilterBySpecies from './FilterBySpecies';
 import FilterByStatus from './FilterByStatus';
 import FilterSortByName from './FilterSortByName';
 import ResetFilters from '../reset/ResetFilters';
+import FilterByEpisodes from './FilterByEpisodes';
 import '../../styles/filters/filters.scss';
 
 const Filters = (props) => 
@@ -24,6 +25,8 @@ const Filters = (props) =>
                                 handleFilter={props.handleFilter}
                                 sortByName={props.sortByName}
                         />
+                        <FilterByEpisodes handleFilter={props.handleFilter} handleResetSearch={props.handleResetSearch}
+                        episodesFilter={props.episodesFilter}/>
                         <ResetFilters 
                                 handleResetFilters={props.handleResetFilters}
                         />

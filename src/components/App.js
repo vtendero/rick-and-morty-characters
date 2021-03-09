@@ -18,6 +18,7 @@ const App = () => {
   const [statusFilter, setStatusFilter] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
   const [sortByName, setSortByName] = useState(false);
+  const [episodesFilter, setEpisodesFilter] = useState(0);
 
   useEffect(() => {
     getDataFromApi()
@@ -36,11 +37,14 @@ const App = () => {
       setStatusFilter(data.value);
     } else if (data.key === 'sortByName') {
       setSortByName(data.checked);
+    } else if (data.key === 'episodes') {
+      setEpisodesFilter(data.value);
     }
   }
 
  const handleResetSearch = () => {
    setNameFilter('');
+   setEpisodesFilter(0);
  }
 
  const handleResetFilters = () => {
@@ -56,11 +60,19 @@ const App = () => {
    setSpeciesFilter('All');
    setStatusFilter('All');
    setSortByName(false);
+   setEpisodesFilter(0);
  }
 
   const filteredCharacters = characters
     .filter(character => {
       return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter (character => {
+      if (episodesFilter === 0 || episodesFilter === '') {
+        return true
+      } else {
+        return character.episodes === parseInt(episodesFilter);
+      }
     })
     .filter(character => {
       return genderFilter === 'All' ? true : character.gender === genderFilter;
@@ -86,6 +98,7 @@ const App = () => {
   
     const renderCharacterDetail = (props) => {
       const characterId = parseInt(props.match.params.id);
+      console.log(props)
       const selectCharacter = characters.find (character => {
         return character.id === characterId;
       });
@@ -113,6 +126,7 @@ const App = () => {
                 speciesFilter={speciesFilter}
                 statusFilter={statusFilter}
                 sortByName={sortByName}
+                episodesFilter={episodesFilter}
                 handleFilter={handleFilter}
                 handleResetFilters={handleResetFilters}
                 handleResetAll={handleResetAll}
