@@ -8,12 +8,14 @@
     justify-content: flex-end;
     background: $blackColor;
     padding: 10px;
-    height: 100px;
+    height: 130px;
+    margin-top: 30px;
 
     @include tablet {
         flex-direction: row;
         height: 70px;
         justify-content:flex-end;
+        margin-top: none;
     }
     
     &__info {
@@ -49,7 +51,6 @@
             cursor: pointer;
             &:hover {
                 transform: scale(1.2);
-                // box-shadow: 0 0 10px #ddd;
             }
         }
     }
@@ -58,8 +59,6 @@
         order: -1;
         width: 90px;
         border-radius: 80px;
-        box-shadow: 0 0 10px #ddd;
-
         @include tablet {
             order: 0;
         }
