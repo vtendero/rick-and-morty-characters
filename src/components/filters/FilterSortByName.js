@@ -15,7 +15,8 @@ const FilterSortByName = (props) => {
                 name='sort'
                 type='checkbox'
                 id='sort'
-                checked={props.sortByName}
+                checked={console.log(props.sortByName)}
+            
                 onClick={handleOnClick}
                 />
                 <p className='filter__SortByName--text'>Ordenar por nombre</p>

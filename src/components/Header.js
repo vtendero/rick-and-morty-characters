@@ -1,6 +1,7 @@
 import '../styles/header.scss';
 import ImageHeader from '../images/ricky-morty-1pk.jpg';
 import FilterByName from './filters/FilterByName';
+import FilterByEpisodes from './filters/FilterByEpisodes';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
@@ -24,6 +25,9 @@ const Header = (props) => {
                         </span>
                         <FilterByName handleFilter={props.handleFilter} handleResetSearch={props.handleResetSearch}
                         nameFilter={props.nameFilter}/>
+                        {/* <FilterByEpisodes handleFilter={props.handleFilter} handleResetSearch={props.handleResetSearch}
+                        episodesFilter={props.episodesFilter}/> */}
+
                 </header>
         );
 }
